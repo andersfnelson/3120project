@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
    #the commands ran are between the <<-SHELL and SHELL
    web.vm.provision "shell", inline: <<-SHELL
    apt-get update
-   apt-get upgrade
+  #  apt-get upgrade
    apt-get install -y apache2
    apt install -y php libapache2-mod-php php-mysql
    systemctl restart apache2.service
@@ -60,7 +60,7 @@ Vagrant.configure("2") do |config|
    #database server as you can
    db.vm.provision "shell", inline: <<-SHELL
    apt-get update
-   apt-get upgrade
+  #  apt-get upgrade
    apt-get install -y mariadb-server
   #  mysql_secure_installation
   # double \\ needed to escape the \ in ruby
